@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_traversing_accessable</title>
+    <script type="text/javascript">
+        console.warn("This is Array_traversing");
+        // Traversing
+
+        let arrData = [1,2,412,1,321,4,654,654,654,65,46,54987,651,3,13,46,8798,641,321,324,987,21,321,6574,987,432,13,498,76,213,21,67498,76,21,0];
+        // arrData.forEach((val,idx)=>{
+        //     document.write(`${idx} => ${val} <br/>`);
+
+        // })
+        const validateCase = (id)=>{
+            if(isNaN(id) || Number(id)<0 || Number(id)>arrData.length){
+                return true;
+            }
+            return false;
+        }
+        function myFun(){
+            
+            let id = document.getElementById('valueItem').value;
+            if(validateCase(id)){
+                alert("Please insert a valid value");
+            }else{
+                alert(arrData[id]);
+            }
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <h2>Array Traversing & Accesable </h2>
+
+    <input type="text" id="valueItem" name="val"/>
+    <button onclick=myFun()>Button CLick</button>
+    
+</body>
+</html>
