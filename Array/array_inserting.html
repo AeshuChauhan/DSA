@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Inserting</title>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 6];
+        document.write(`[${arr}]`)
+        
+        const errorCase = (val)=>{
+            if(val == "" || isNaN(val) || val > arr.length) {
+                return true;
+            }
+            return false;
+        }
+
+        const insertArray=()=>{
+            let position = document.getElementById("pos").value;
+            let element = document.getElementById("element").value;
+            if(errorCase(position)){
+                alert("something is wrong in this bakwass");
+                return;
+            }else{
+                for(i=arr.length-1; i>=position; i--) {
+                    console.log(i,element,position)
+                    if(i === Number(position)){
+                        arr[i] = element;
+                    }else{
+                        arr[i+1] = arr[i];
+                    }
+                }
+                alert(arr)
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Array Inserting</h2>
+    <input id="pos" placeholder="position"/>
+    <input id="element" placeholder="Element"/>
+    <button onclick="insertArray()">Click</button>
+    <br/>
+    
+</body>
+</html>
