@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array searching</title>
+    <script>
+        let myArray = [10,20,30,40,50,100];
+        document.write(`My array is : [ ${myArray}]`)
+
+
+        // my error case Function 
+        const errorCase = (val) => {
+            if(val ===""){
+                return true;
+            }
+            return false;
+        }
+        // my search function
+        const mySearch = ()=>{
+            let searchValue = document.getElementById("searchValue").value;
+            if(errorCase(searchValue)){
+                alert("Please check your search value once more...😶‍🌫️😶‍🌫️😶‍🌫️");
+                return;
+            }
+            for(i=0; i<myArray.length; i++){
+                if(myArray[i] == searchValue){
+                    alert("Bhai value isme hai....😂😂😂");
+                    return;
+                }
+            }
+            alert("Abe ja rey ... Isme kuch nhi hai re... 😁😁😁😁");
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Array searching with tha <i>Linear Search</i></h1>
+    <input type="text" id="searchValue">
+    <button onclick="mySearch()">Search</button>
+</body>
+</html>
