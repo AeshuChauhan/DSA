@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Sort</title>
+    <script>
+      let arrData = [5, 1, 6, 8, 2];
+      for (i = 0; i < arrData.length; i++) {
+        for (j = 0; j < arrData.length; j++) {
+          if (arrData[j + 1] < arrData[j]) {
+            let newTemp = arrData[j];
+            arrData[j] = arrData[j + 1];
+            arrData[j + 1] = newTemp;
+          }
+        }
+      }
+      console.log(arrData);
+    </script>
+  </head>
+  <body>
+    <h1>Bubbler sort</h1>
+    <p>Please open console for result</p>
+    <pre>
+        let arrData = [5, 1, 6, 8, 2];
+      for (i = 0; i < arrData.length; i++) {
+        for (j = 0; j < arrData.length; j++) {
+          if (arrData[j + 1] < arrData[j]) {
+            let newTemp = arrData[j];
+            arrData[j] = arrData[j + 1];
+            arrData[j + 1] = newTemp;
+          }
+        }
+      }
+    </pre>
+  </body>
+</html>
